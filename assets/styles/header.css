@@ -1,0 +1,107 @@
+/**********/
+/* HEADER */
+/**********/
+.header {
+    height: 100vh;
+}
+
+.header--wrapper {
+    padding: 0 2rem;
+    transform: rotate(180deg);
+    height: 100%;
+
+    background-color: var(--background-color);
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+}
+
+.header--navigation {
+    padding: 1rem 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+}
+
+.header--navigation--logo {
+    font-family: var(--heading-font), monospace;
+    color: var(--primary-color);
+}
+
+.header--navigation--logo span {
+    color: var(--secondary-color);
+}
+
+.header--navigation hr {
+    border: 0;
+    border-left: 0.1rem dashed var(--primary-color);
+    flex-grow: 1;
+}
+
+.header--navigation--links {
+    list-style-type: none;
+}
+
+.header--navigation--links a {
+    transition: all 0.25s ease;
+}
+
+.header--navigation--links a:hover {
+    padding: 0.5rem 0.1rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.header--heading {
+    display: flex;
+
+    white-space: nowrap;
+    overflow: hidden;
+
+    font-size: 4rem;
+    font-weight: bolder;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.header--text {
+    padding: 2rem 0;
+    color: var(--text-color);
+}
+
+.header--subtext {
+    text-align: right;
+    font-size: 0.5rem;
+    padding: 2rem 0;
+    color: white;
+}
+
+.header--text strong {
+    color: var(--primary-color);
+}
+
+.header--heading span {
+    display: inline-block;
+    color: var(--primary-color);
+
+    animation: marquee 15s linear infinite;
+}
+
+.header--heading span:nth-of-type(2n) {
+    color: var(--secondary-color);
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-200%);
+    }
+}

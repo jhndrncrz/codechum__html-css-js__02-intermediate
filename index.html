@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Wiki, Wiki, Wide-Wide Web!</title>
+
+    <!-- IMPORTED SCRIPTS -->
+    <!--
+        Imported scripts include the following:
+        - D3.js (for data visualization)
+      -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- IMPORTED STYLES -->
+    <!--
+        Imported stylesheets include the following:
+        - Font Awesome (for icons)
+      -->
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+          integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+          referrerpolicy="no-referrer" rel="stylesheet"/>
+
+    <!-- LOCAL STYLES -->
+    <!--
+        Local stylesheets include the following:
+        - reset.css (for resetting default browser styles)
+        - global.css (for shared styles across the website)
+        - header.css (for the header)
+        - scrollbar.css (for the custom scrollbar)
+        - style.css (for custom styles for this page)
+      -->
+    <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+<article class="container">
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header--wrapper">
+            <nav class="header--navigation">
+                <div class="header--navigation--logo">
+                    wiki-<span>wide-web!</span>.
+                </div>
+                <hr>
+                <ul class="header--navigation--links">
+                    <li>
+                        <a href="./index.html">Home</a>
+                    </li>
+                </ul>
+            </nav>
+            <h1 class="header--heading marquee">
+                <span> Wiki, Wiki, Wide-Wide Web! </span>
+                <span> Wiki, Wiki, Wide-Wide Web! </span>
+                <span> Wiki, Wiki, Wide-Wide Web! </span>
+            </h1>
+            <p class="header--text">
+
+            </p>
+        </div>
+    </header>
+    <!-- END HEADER -->
+
+    <!-- BODY -->
+    <div class="body">
+        <div class="card-list">
+            <section class="card-list--item-component" data-algorithm="odd">
+                <h2 class="card-list--item-component--heading">
+                    About
+                    <ul class="card-list--item-component--tags">
+                        <li>
+                            About
+                        </li>
+                        <li>
+                            The
+                        </li>
+                        <li>
+                            W5
+                        </li>
+                    </ul>
+                </h2>
+                <p class="card-list--item-component--text">
+                    <strong>Wiki-wiki Wide, Wide, Web!</strong> is a data visualization tool to explore
+                    the vast information on Wikipedia! Enter a topic in the search bar
+                    and click the suggestions to see the data of related articles
+                    rendered into a graph.
+                </p>
+            </section>
+
+            <section class="card-list--item-component" data-algorithm="odd">
+                <h2 class="card-list--item-component--heading">
+                    How To
+                    <ul class="card-list--item-component--tags">
+                        <li>
+                            How
+                        </li>
+                        <li>
+                            To
+                        </li>
+                        <li>
+                            W5
+                        </li>
+                    </ul>
+                </h2>
+                <p class="card-list--item-component--text">
+                    <strong>Enter a topic</strong> in the search bar and click on any of the suggestions
+                    to view a network of concepts related to the search topic.
+                </p>
+            </section>
+        </div>
+
+        <div class="main-content">
+            <section class="visualizer">
+                <div id="search-container">
+                    <label for="search-input"></label>
+                    <input autocomplete="off" id="search-input" placeholder="Enter a topic" type="text"/>
+                    <ul id="suggestions"></ul>
+                </div>
+            </section>
+
+            <section class="search-history">
+                <article id="graph-container"></article>
+
+                <div class="search-half">
+                    <h2 class="search-history--heading">Search History</h2>
+                    <table class="history-table">
+                        <thead class="search-history--header">
+                        <tr>
+                            <th>Topic</th>
+                            <th>Nodes</th>
+                            <th>Date</th>
+                        </tr>
+                        </thead>
+                        <tbody class="search-history--body"></tbody>
+                    </table>
+                </div>
+
+            </section>
+        </div>
+
+        <footer class="footer">
+            <hr class="divider"/>
+            <p class="footer--text">
+                &copy; Made with love by
+                <a href="https://www.linkedin.com/in/jhndrncrz">John Adrian Cruz</a>
+            </p>
+            <ul class="socials">
+                <li class="socials--list-element">
+                    <a class="socials--list-anchor" href="https://www.facebook.com/jhndrncrz">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li class="socials--list-element">
+                    <a class="socials--list-anchor" href="https://www.twitter.com/jhndrncrz">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="socials--list-element">
+                    <a class="socials--list-anchor" href="https://www.linkedin.com/in/jhndrncrz">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="socials--list-element">
+                    <a class="socials--list-anchor" href="https://www.github.com/jhndrncrz">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <!-- END BODY -->
+</article>
+
+<div id="icon-container"></div>
+
+<!-- LOCAL SCRIPTS -->
+<!--
+    Local scripts include the following:
+    - script.js (for custom scripts for this page)
+      - contains the logic for:
+        - fetching data from the Wikipedia API
+        - rendering the data into a graph
+  -->
+<script src="./script.js"></script>
+</body>
+
+</html>

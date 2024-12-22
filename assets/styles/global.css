@@ -1,0 +1,94 @@
+/***************/
+/* CSS IMPORTS */
+/***************/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik+Mono+One&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/phosphor-icons@1.4.2/src/css/icons.min.css');
+@import url('./header.css');
+@import url('./scrollbar.css');
+
+:root {
+    --primary-color: yellow;
+    --secondary-color: blue;
+    --text-color: white;
+    --background-color: black;
+    --heading-font: 'Rubik Mono One';
+    --text-font: 'Roboto Mono';
+    --x-dir: 1;
+    --y-dir: 1;
+}
+
+html {
+    font-size: 24px;
+    color: var(--text-color);
+    overflow: hidden;
+}
+
+/* Small screens (mobile) */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+/* Tablets and up */
+@media (min-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+/* Larger tablets */
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+/* Small desktops and up */
+@media (min-width: 1024px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+/* Large desktops */
+@media (min-width: 1200px) {
+    body {
+        font-size: 22px;
+    }
+}
+
+body {
+    font-family: var(--text-font), monospace;
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--text-font), monospace;
+}
+
+a:hover,
+a:link,
+a:visited,
+a:active {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.divider {
+    width: 100%;
+}

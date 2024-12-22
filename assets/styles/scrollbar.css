@@ -1,0 +1,17 @@
+/********************/
+/* CUSTOM SCROLLBAR */
+/********************/
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    padding: 1rem;
+    border: 0.1rem solid var(--primary-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+}
